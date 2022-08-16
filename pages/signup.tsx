@@ -1,17 +1,16 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState, FormEvent } from 'react';
-import { useUser } from '@supabase/supabase-auth-helpers/react';
-import { supabaseClient } from '@supabase/supabase-auth-helpers/nextjs';
+import { useUser } from '@supabase/auth-helpers-react';
+import { supabaseClient } from '@supabase/auth-helpers-nextjs';
 
 import Button from 'components/ui/Button';
 import Input from 'components/ui/Input';
 import Logo from 'components/icons/Logo';
 import { updateUserName } from 'utils/supabase-client';
-import { User } from '@supabase/gotrue-js';
 
 const SignUp = () => {
-  const [newUser, setNewUser] = useState<User | null>(null);
+  const [newUser, setNewUser] = useState<any>(null);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [name, setName] = useState('');

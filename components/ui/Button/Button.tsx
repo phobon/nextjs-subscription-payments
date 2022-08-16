@@ -1,6 +1,6 @@
 import cn from 'classnames';
 import React, { forwardRef, useRef, ButtonHTMLAttributes } from 'react';
-import mergeRefs from 'react-merge-refs';
+import { mergeRefs } from 'react-merge-refs';
 import styles from './Button.module.css';
 
 import LoadingDots from 'components/ui/LoadingDots';
